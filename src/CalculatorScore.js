@@ -23,7 +23,7 @@ function handleClick(){
   {
     grades = "Failed"
   }
-  else if(avg > 75)
+  else if(avg >= 75)
   {
     grades = "Passed"
   }
@@ -36,7 +36,7 @@ return (
 
         <div className="form-group">
         <label>Students Name</label>
-        <input type="text" className="form-control"/>
+        <input type="text"  name="studentName" className="form-control"/>
 
         <label>Score 1</label>
         <input type="number" name="score1" className="form-control" onChange={(event) =>
