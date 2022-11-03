@@ -13,10 +13,10 @@ function CalculatorScore() {
     var grades;
     var avg;
 function handleClick(){
-  total= Number(score1) + Number(score2) + Number(score3);
+  let total= parseInt(score1) + parseInt(score2) + parseInt(score3);
   setTot(total);
  
-  avg =  Number(total/3);
+  avg =(total/3);
   setAvg(avg);
  
   if(avg < 75)
@@ -31,40 +31,40 @@ function handleClick(){
 }
  
 return (
-    <div className="container">
+  <div className="container">
         <h1>Students Scores Calculation</h1>
 
-        <div className="form-group">
-        <label>Students Name</label>
-        <input type="text"  name="studentName" className="form-control"/>
+    <div className="form-group">
+        <label>Students Name:</label>
+        <input type="text"  name="studentName" className="form-control" required/>
 
-        <label>Score 1</label>
+        <label>Score 1:</label>
         <input type="number" name="score1" className="form-control" onChange={(event) =>
         {setScores1(event.target.value);}}>
         </input>
  
-        <label>Score 2</label>
+        <label>Score 2:</label>
         <input type="number" name="score2"  className="form-control" onChange={(event) =>
         {setScores2(event.target.value);}}>
          </input>
        
-        <label>Score 3</label>
+        <label>Score 3:</label>
         <input type="number" name="score3"  className="form-control" onChange={(event) =>
         {setScores3(event.target.value);}}>
          </input>
     
-        <label>Total</label>
+        <label>Total:</label>
         <input type="text"   className="form-control" value={ tot }></input>  
         
-        <label>Average</label>
+        <label>Average:</label>
         <input type="text"   className="form-control" value={ average }></input>  
         
-        <label>Grade</label>
+        <label>Grade:</label>
         <input type="text"   className="form-control" value={ grade }></input>  
        
         <button onClick={handleClick}  className="btn btn-primary mt-4"> Click Me</button>
-        </div>
     </div>
+  </div>
     );         
 }
 
